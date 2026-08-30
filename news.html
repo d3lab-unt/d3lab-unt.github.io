@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | D3 Lab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/img/d3lab-icon-v2.png" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <div class="navbar-brand d-flex align-items-center gap-3 mb-0">
+          <a href="index.html">
+            <img
+              src="assets/img/d3lab-logo-lockup.png"
+              alt="D3 Lab - Data-Driven Decisions Lab"
+              class="brand-logo-lockup"
+            />
+          </a>
+          <a href="https://www.unt.edu" target="_blank" rel="noopener">
+            <img src="assets/img/unt-logo.png" alt="UNT Logo" height="30" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section page-hero">
+      <div class="container">
+        <div class="hero-eyebrow">Lab Updates</div>
+        <h1>News &amp; Events</h1>
+        <p class="lead">Announcements, talks, and milestones from the lab.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="accordion" id="newsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                aria-expanded="true"
+                aria-controls="collapse1"
+              >
+                <div>
+                  <div class="news-date">August 2026</div>
+                  <div class="fw-semibold">D3 Lab website launched</div>
+                </div>
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#newsAccordion">
+              <div class="accordion-body">
+                The Data-Driven Decisions Lab launched its new website, sharing
+                the lab's research areas, team, publications, and open
+                opportunities for prospective students.
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder entries: replace with real lab news/events as they happen -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                aria-expanded="false"
+                aria-controls="collapse2"
+              >
+                <div>
+                  <div class="news-date">Coming Soon</div>
+                  <div class="fw-semibold">More updates on the way</div>
+                </div>
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#newsAccordion">
+              <div class="accordion-body">
+                Check back for news on publications, talks, grants, and lab
+                events.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="text-white d-flex align-items-center gap-2">
+              <img src="assets/img/d3lab-icon-v2.png" alt="" height="26" class="brand-icon-chip" />
+              D3 Lab
+            </h5>
+            <p class="mb-0">
+              Data-Driven Decisions Lab<br />
+              Department of Data Science<br />
+              University of North Texas
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Quick Links</h5>
+            <p class="mb-1"><a href="research.html">Research</a></p>
+            <p class="mb-1"><a href="team.html">Team</a></p>
+            <p class="mb-1"><a href="publications.html">Publications</a></p>
+            <p class="mb-0"><a href="join.html">Join Us</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Contact</h5>
+            <p class="mb-1"><i class="bi bi-envelope me-1"></i> sahara.ali@unt.edu</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-1"></i> Discovery Park, Denton, TX</p>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; <span id="copyright-year">2026</span> Data-Driven Decisions Lab, University of North Texas. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

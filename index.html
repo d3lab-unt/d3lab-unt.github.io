@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 Lab | Data-Driven Decisions Lab, UNT</title>
+    <meta
+      name="description"
+      content="The Data-Driven Decisions Lab (D3 Lab) at the University of North Texas, directed by Dr. Sahara Ali, researches causal machine learning and spatiotemporal data science for Earth and climate systems."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/img/d3lab-icon-v2.png" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <div class="navbar-brand d-flex align-items-center gap-3 mb-0">
+          <a href="index.html">
+            <img
+              src="assets/img/d3lab-logo-lockup.png"
+              alt="D3 Lab - Data-Driven Decisions Lab"
+              class="brand-logo-lockup"
+            />
+          </a>
+          <a href="https://www.unt.edu" target="_blank" rel="noopener">
+            <img src="assets/img/unt-logo.png" alt="UNT Logo" height="30" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Data-Driven Decisions Lab</h1>
+        <p class="hero-affiliation">
+          Anuradha and Vikas Sinha Department of Data Science<br />
+          University of North Texas
+        </p>
+        <p class="lead">
+          We advance causal machine learning and spatiotemporal data science to
+          turn complex Earth and environmental data, from Arctic sea ice
+          to regional air quality; into decisions that matter.
+        </p>
+        <a href="research.html" class="btn btn-green btn-lg me-2">Our Research</a>
+        <a href="join.html" class="btn btn-outline-green btn-lg">Join the Lab</a>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <h2 class="section-title">About the Lab</h2>
+            <p style="text-align: justify;">
+              The Data-Driven Decisions Lab (D3 Lab) is an interdisciplinary research
+              group in the Anuradha and Vikas Sinha Department of Data Science at the
+              University of North Texas, directed by
+              <a href="team.html">Dr. Sahara Ali</a>. Our work sits at the
+              intersection of causal inference, deep learning, and spatiotemporal
+              data mining, applied to some of the hardest measurement problems in earth science including Arctic sea ice forecasting and air
+              quality modeling with the goal of producing methods that are
+              both predictive and causally sound enough to inform real decisions.
+            </p>
+            <a href="research.html" class="fw-semibold">
+              Explore our research areas <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <div class="card p-4 h-100">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img
+                  src="assets/img/sahara-ali.jpg"
+                  alt="Dr. Sahara Ali"
+                  class="team-photo"
+                  style="width: 88px; height: 88px; margin: 0; flex-shrink: 0;"
+                />
+                <div>
+                  <h5 class="mb-1">Dr. Sahara Ali</h5>
+                  <div class="team-role mb-0">
+                    Lab Director<br />
+                    Assistant Professor<br />
+                    Department of Data Science, UNT
+                  </div>
+                </div>
+              </div>
+              <p class="pub-meta" style="text-align: justify;">
+                Dr. Ali directs the D3 Lab and researches causal machine learning,
+                spatiotemporal data mining, and Earth informatics, with a focus on
+                Arctic sea ice forecasting and climate systems. She holds a PhD and
+                MS in Information Systems from the University of Maryland.
+              </p>
+              <a href="team.html" class="fw-semibold">Full profile <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research preview -->
+    <section class="py-5 bg-surface">
+      <div class="container">
+        <h2 class="section-title text-center mx-auto">Research Areas</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card research-card">
+              <div class="research-icon"><i class="bi bi-diagram-3"></i></div>
+              <h5>Causal Inference &amp; ML</h5>
+              <p class="pub-meta">Causal discovery and inference methods for complex, high-dimensional systems.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card research-card">
+              <div class="research-icon"><i class="bi bi-globe-americas"></i></div>
+              <h5>Spatiotemporal Data Mining</h5>
+              <p class="pub-meta">Modeling and forecasting complex patterns across space and time in Earth data.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card research-card">
+              <div class="research-icon"><i class="bi bi-snow"></i></div>
+              <h5>Arctic &amp; Polar Climate</h5>
+              <p class="pub-meta">Deep learning models for Arctic sea ice forecasting and polar climate dynamics.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card research-card">
+              <div class="research-icon"><i class="bi bi-cloud-haze2"></i></div>
+              <h5>Earth &amp; Environmental ML</h5>
+              <p class="pub-meta">Scientific machine learning for air quality and environmental monitoring in North Texas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News preview -->
+    <section class="py-5 bg-surface">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <span class="section-eyebrow">Stay Updated</span>
+            <h2 class="section-title mb-0">Latest News</h2>
+          </div>
+          <a href="news.html" class="fw-semibold d-none d-md-inline">View all <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+              <div class="news-date mb-2">August 2026</div>
+              <h5>D3 Lab website launched</h5>
+              <p class="pub-meta mb-0">
+                The Data-Driven Decisions Lab launches its new home on the web,
+                showcasing our research, team, and publications.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+              <div class="news-date mb-2">Ongoing</div>
+              <h5>Recruiting graduate researchers</h5>
+              <p class="pub-meta mb-0">
+                We are looking for motivated PhD and MS students interested in
+                causal ML and spatiotemporal data science.
+                <a href="join.html">Learn more &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5" style="background: linear-gradient(135deg, #0d3b22 0%, var(--unt-green-dark) 100%);">
+      <div class="container text-center text-white">
+        <h2 class="fw-bold mb-3">Interested in working with us?</h2>
+        <p class="lead mb-4">
+          We welcome inquiries from prospective PhD/MS students and collaborators.
+        </p>
+        <a href="join.html" class="btn btn-green btn-lg">Join the Lab</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="text-white d-flex align-items-center gap-2">
+              <img src="assets/img/d3lab-icon-v2.png" alt="" height="26" />
+              D3 Lab
+            </h5>
+            <p class="mb-0">
+              Data-Driven Decisions Lab<br />
+              Department of Data Science<br />
+              University of North Texas
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Quick Links</h5>
+            <p class="mb-1"><a href="research.html">Research</a></p>
+            <p class="mb-1"><a href="team.html">Team</a></p>
+            <p class="mb-1"><a href="publications.html">Publications</a></p>
+            <p class="mb-0"><a href="join.html">Join Us</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Contact</h5>
+            <p class="mb-1"><i class="bi bi-envelope me-1"></i> sahara.ali@unt.edu</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-1"></i> Discovery Park, Denton, TX</p>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; <span id="copyright-year">2026</span> Data-Driven Decisions Lab, University of North Texas. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

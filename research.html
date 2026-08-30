@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research | D3 Lab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/img/d3lab-icon-v2.png" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <div class="navbar-brand d-flex align-items-center gap-3 mb-0">
+          <a href="index.html">
+            <img
+              src="assets/img/d3lab-logo-lockup.png"
+              alt="D3 Lab - Data-Driven Decisions Lab"
+              class="brand-logo-lockup"
+            />
+          </a>
+          <a href="https://www.unt.edu" target="_blank" rel="noopener">
+            <img src="assets/img/unt-logo.png" alt="UNT Logo" height="30" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section page-hero">
+      <div class="container">
+        <h1>Research &amp; Projects</h1>
+        <p class="lead">
+          Applied machine learning and spatiotemporal data science, applied to
+          Earth and environmental systems and the funded projects
+          putting it into practice.
+        </p>
+      </div>
+    </section>
+
+    <!-- Model diagrams showcase (highlighted at the front of the page) -->
+    <section class="py-5">
+      <div class="container">
+        <div class="model-showcase-panel">
+          <div
+            id="modelCarousel"
+            class="carousel slide model-carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="6000"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#modelCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="AirPGDL"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#modelCarousel"
+                data-bs-slide-to="1"
+                aria-label="LLM-Guided Causal Graph Discovery"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#modelCarousel"
+                data-bs-slide-to="2"
+                aria-label="Scientific ML for AQI Forecasting"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="model-caption">
+                  <span class="model-tag">Physics-Guided Deep Learning</span>
+                  <h5>AirPGDL: Physics-Guided Deep Learning for Air Quality Forecasting</h5>
+                  <p class="pub-meta mb-2">
+                    A multi-horizon AQI forecasting pipeline that benchmarks statistical and deep
+                    learning baselines (SARIMAX, LSTM, GRU, Transformer, jPINN) against a proposed
+                    physics-guided model combining LSTM and Transformer layers with a loss
+                    constrained by the EPA AQI formulation.
+                  </p>
+                  <a href="assets/img/AirPGDL.png" target="_blank" rel="noopener" class="fw-semibold">
+                    View full-size diagram <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div class="model-frame">
+                  <img
+                    src="assets/img/AirPGDL.png"
+                    alt="AirPGDL: physics-guided deep learning pipeline for multi-horizon air quality forecasting"
+                  />
+                </div>
+
+              </div>
+
+              <div class="carousel-item">
+                <div class="model-caption">
+                  <span class="model-tag">Causal Discovery</span>
+                  <h5>LLM-Guided Causal Graph Discovery</h5>
+                  <p class="pub-meta mb-2">
+                    A three-stage pipeline that extracts variables and relations from scientific
+                    literature via knowledge graphs and an LLM (Llama3), filters candidate causal
+                    relations, then applies statistical causal discovery methods (PCMCI, PC, GES,
+                    LiNGAM, DAG-GNN) to build validated causal structures.
+                  </p>
+                  <a href="assets/img/llm_based_cg.png" target="_blank" rel="noopener" class="fw-semibold">
+                    View full-size diagram <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div class="model-frame">
+                  <img
+                    src="assets/img/llm_based_cg.png"
+                    alt="LLM-guided causal graph discovery pipeline combining knowledge graphs and statistical causal discovery"
+                  />
+                </div>
+
+              </div>
+
+              <div class="carousel-item">
+                <div class="model-caption">
+                  <span class="model-tag">Scientific Machine Learning</span>
+                  <h5>Scientific ML for Air Quality Index Forecasting</h5>
+                  <p class="pub-meta mb-2">
+                    A physics-informed neural network pipeline that combines a data-driven loss with
+                    a physics loss derived from the EPA AQI formulation to forecast PM2.5- and
+                    ozone-based AQI.
+                  </p>
+                  <a href="assets/img/SciMLAQI.png" target="_blank" rel="noopener" class="fw-semibold">
+                    View full-size diagram <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div class="model-frame">
+                  <img
+                    src="assets/img/SciMLAQI.png"
+                    alt="Scientific machine learning pipeline with physics guidance for AQI forecasting"
+                  />
+                </div>
+
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#modelCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#modelCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research areas -->
+    <section class="py-5 bg-surface">
+      <div class="container">
+        <h2 class="section-title text-center mx-auto">Research Areas</h2>
+        <div class="row g-4 mb-3">
+          <div class="col-lg-6">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-diagram-3"></i></div>
+              <h4>Causal Inference &amp; Machine Learning</h4>
+              <p style="text-align: justify;">
+                We develop methods for causal discovery and causal inference in
+                complex, high-dimensional systems, bridging classical causal
+                inference theory with modern deep learning. This work underpins
+                our broader effort to build models that don't just predict, but
+                also explain the drivers behind observed changes in physical
+                systems.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-globe-americas"></i></div>
+              <h4>Spatiotemporal Data Mining</h4>
+              <p style="text-align: justify;">
+                Earth science data is inherently spatiotemporal, correlated
+                across both space and time. We design deep learning architectures
+                (including attention-based and multi-temporal models) that capture
+                these dependencies to improve forecasting skill for complex
+                environmental variables.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6" id="arctic">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-snow"></i></div>
+              <h4>Arctic &amp; Polar Climate Science</h4>
+              <p style="text-align: justify;">
+                A core application area of the lab is Arctic sea ice forecasting.
+                Our prior work includes attention-based ensemble LSTM models and
+                MT-IceNet, a spatial and multi-temporal deep learning model for
+                sea ice prediction. This work is now extended through the
+                NSF-funded project
+                <em>Causality-at-Scale for Polar Regions</em>, which develops
+                scalable causal inference methods for polar climate systems.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-cpu"></i></div>
+              <h4>Scientific Machine Learning</h4>
+              <p style="text-align: justify;">
+                We develop physics-guided and physics-informed deep learning
+                models that embed domain equations, such as the EPA Air
+                Quality Index formulation, directly into the learning
+                process, improving generalization and interpretability over
+                purely data-driven baselines like LSTM, GRU, and Transformer
+                models.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-wind"></i></div>
+              <h4>Air Quality Analysis</h4>
+              <p style="text-align: justify;">
+                We model and forecast air quality, including PM2.5 and
+                ozone-based AQI, across multiple time horizons for North
+                Texas, benchmarking statistical, deep learning, and
+                physics-guided approaches to support real-world environmental
+                decision-making.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card research-card h-100">
+              <div class="research-icon"><i class="bi bi-cloud-haze2"></i></div>
+              <h4>Earth Informatics &amp; Environmental ML</h4>
+              <p style="text-align: justify;">
+                Beyond the poles, we apply machine learning to Earth observation
+                and environmental sensing problems, including satellite-based
+                cloud detection and domain adaptation across remote sensing
+                modalities, connecting large-scale Earth data methods to
+                real-world environmental monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Current Projects</h2>
+        <div class="row g-4 mb-3">
+          <div class="col-lg-6">
+            <div class="card project-card h-100">
+              <span class="funding-tag status-ongoing">NSF Funded</span>
+              <h4>Causality-at-Scale for Polar Regions</h4>
+              <p style="text-align: justify;">
+                Developing scalable causal inference methods for polar and Arctic
+                climate systems, extending the lab's prior sea ice forecasting
+                work into a causal framework that can help attribute drivers of
+                rapid Arctic change.
+              </p>
+              <a href="#arctic" class="fw-semibold">Related research area <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card project-card h-100">
+              <span class="funding-tag status-ongoing">Ongoing</span>
+              <h4>Scientific ML for Air Quality in North Texas</h4>
+              <p style="text-align: justify;">
+                Applying scientific machine learning methods to model and forecast
+                regional air quality, connecting large-scale Earth data science
+                methods developed in the lab to decisions with direct local
+                impact.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title">Past Projects</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card project-card h-100">
+              <span class="funding-tag">Completed</span>
+              <h4>MT-IceNet</h4>
+              <p style="text-align: justify;">
+                A spatial and multi-temporal deep learning model for Arctic sea
+                ice forecasting, published at the IEEE/ACM International
+                Conference on Big Data Computing (2022).
+              </p>
+              <a href="publications.html" class="fw-semibold">See publication <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card project-card h-100">
+              <span class="funding-tag">Completed</span>
+              <h4>Attention-Based Ensemble LSTM for Sea Ice Forecasting</h4>
+              <p style="text-align: justify;">
+                An attention-based ensemble LSTM approach for forecasting Arctic
+                sea ice extent, laying the groundwork for the lab's later
+                spatiotemporal and causal modeling work.
+              </p>
+              <a href="publications.html" class="fw-semibold">See publication <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center mb-0 mt-4">
+          <a href="publications.html" class="fw-semibold">See related publications <i class="bi bi-arrow-right"></i></a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="text-white d-flex align-items-center gap-2">
+              <img src="assets/img/d3lab-icon-v2.png" alt="" height="26" class="brand-icon-chip" />
+              D3 Lab
+            </h5>
+            <p class="mb-0">
+              Data-Driven Decisions Lab<br />
+              Department of Data Science<br />
+              University of North Texas
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Quick Links</h5>
+            <p class="mb-1"><a href="research.html">Research</a></p>
+            <p class="mb-1"><a href="team.html">Team</a></p>
+            <p class="mb-1"><a href="publications.html">Publications</a></p>
+            <p class="mb-0"><a href="join.html">Join Us</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-white">Contact</h5>
+            <p class="mb-1"><i class="bi bi-envelope me-1"></i> sahara.ali@unt.edu</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-1"></i> Discovery Park, Denton, TX</p>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; <span id="copyright-year">2026</span> Data-Driven Decisions Lab, University of North Texas. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
