@@ -68,57 +68,92 @@
 
     <section class="py-5">
       <div class="container">
-        <div class="accordion" id="newsAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse1"
-                aria-expanded="true"
-                aria-controls="collapse1"
-              >
-                <div>
-                  <div class="news-date">August 2026</div>
-                  <div class="fw-semibold">D3 Lab website launched</div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#newsAccordion">
-              <div class="accordion-body">
+        <!-- Category filter -->
+        <div class="news-filter mb-5" role="group" aria-label="Filter news">
+          <button type="button" class="news-filter-btn active" data-filter="all">All</button>
+          <button type="button" class="news-filter-btn" data-filter="publication"><i class="bi bi-journal-text"></i> Publications</button>
+          <button type="button" class="news-filter-btn" data-filter="lab"><i class="bi bi-building"></i> Lab</button>
+          <button type="button" class="news-filter-btn" data-filter="opportunity"><i class="bi bi-people"></i> Opportunities</button>
+        </div>
+
+        <div class="news-timeline">
+          <!-- Newest first. Add new items at the top; set data-category to publication | lab | opportunity -->
+          <article class="timeline-item" data-category="publication">
+            <div class="timeline-dot dot-accepted"><i class="bi bi-trophy-fill"></i></div>
+            <div class="news-featured">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <span class="news-badge badge-accepted"><i class="bi bi-trophy-fill"></i> Paper Accepted</span>
+                <span class="news-new-pill">New</span>
+                <span class="news-date-light ms-auto">November 2026</span>
+              </div>
+              <h3 class="news-featured-title">
+                AirPhyAQI: Physics-Guided Graph Neural ODE for Long-Term Air Quality Forecasting
+              </h3>
+              <p class="mb-3">
+                Our paper has been accepted at <strong>IEEE BigData 2026</strong>, the IEEE
+                International Conference on Big Data. The work combines physics-guided
+                modeling with graph neural ODEs for long-term air quality forecasting.
+              </p>
+              <ul class="news-event-meta">
+                <li><i class="bi bi-calendar-event"></i> December 14&ndash;17, 2026</li>
+                <li><i class="bi bi-geo-alt"></i> Sheraton Phoenix Downtown, Phoenix, Arizona, USA</li>
+              </ul>
+              <div class="news-countdown" data-event-date="2026-12-14T09:00:00-07:00">
+                <i class="bi bi-hourglass-split"></i> <span class="countdown-text">Coming up in December</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-category="publication">
+            <div class="timeline-dot"><i class="bi bi-journal-text"></i></div>
+            <div class="news-card news-publication">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <span class="news-badge badge-publication"><i class="bi bi-journal-text"></i> Publication</span>
+                <span class="news-new-pill">New</span>
+                <span class="news-date ms-auto">November 2026</span>
+              </div>
+              <h5 class="mb-2">LLM-based Causal Discovery from Scientific Literature</h5>
+              <p class="pub-meta mb-2">
+                K. I. Masud, A. Kachhadiya, S. Sharma, S. Ali. Published in the
+                Proceedings of the 2nd ACM SIGSPATIAL International Workshop on Polar Data.
+              </p>
+              <a href="publications.html" class="news-link">View publications <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-category="lab">
+            <div class="timeline-dot dot-lab"><i class="bi bi-rocket-takeoff"></i></div>
+            <div class="news-card news-lab">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <span class="news-badge badge-lab"><i class="bi bi-building"></i> Lab</span>
+                <span class="news-date ms-auto">August 2026</span>
+              </div>
+              <h5 class="mb-2">D3 Lab website launched</h5>
+              <p class="pub-meta mb-0">
                 The Data-Driven Decisions Lab launched its new website, sharing
                 the lab's research areas, team, publications, and open
                 opportunities for prospective students.
-              </div>
+              </p>
             </div>
-          </div>
+          </article>
 
-          <!-- Placeholder entries: replace with real lab news/events as they happen -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading2">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse2"
-                aria-expanded="false"
-                aria-controls="collapse2"
-              >
-                <div>
-                  <div class="news-date">Coming Soon</div>
-                  <div class="fw-semibold">More updates on the way</div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#newsAccordion">
-              <div class="accordion-body">
-                Check back for news on publications, talks, grants, and lab
-                events.
+          <article class="timeline-item" data-category="opportunity">
+            <div class="timeline-dot dot-opportunity"><i class="bi bi-people-fill"></i></div>
+            <div class="news-card news-opportunity">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <span class="news-badge badge-opportunity"><i class="bi bi-people-fill"></i> Opportunity</span>
+                <span class="news-date ms-auto">Ongoing</span>
               </div>
+              <h5 class="mb-2">Recruiting graduate researchers</h5>
+              <p class="pub-meta mb-2">
+                We are looking for motivated MS students interested in
+                causal ML and spatiotemporal data science.
+              </p>
+              <a href="join.html" class="news-link">Learn more <i class="bi bi-arrow-right"></i></a>
             </div>
-          </div>
+          </article>
         </div>
+        <p class="news-empty text-center pub-meta d-none">No news in this category yet.</p>
       </div>
     </section>
 

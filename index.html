@@ -63,7 +63,16 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero-section">
+    <section class="hero-section hero-home">
+      <!-- Background slideshow: put UNT photos at these paths (wide landscape, ~1920px).
+           If a file is missing, the green gradient shows as before. -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-slide" style="background-image: url('assets/img/hero-unt-discovery-park.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/img/hero-unt-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/img/hero-unt-2.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/img/hero-unt-3.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/img/hero-unt-4.jpg');"></div>
+      </div>
       <div class="container">
         <h1>Data-Driven Decisions Lab</h1>
         <p class="hero-affiliation">
@@ -124,7 +133,12 @@
                 Arctic sea ice forecasting and climate systems. She holds a PhD and
                 MS in Information Systems from the University of Maryland.
               </p>
-              <a href="team.html" class="fw-semibold">Full profile <i class="bi bi-arrow-right"></i></a>
+              <div class="mt-3 text-center">
+                <a href="https://datascience.unt.edu/people/sahara-ali.html" target="_blank" rel="noopener" class="social-icon social-icon-web" title="Full Profile"><i class="bi bi-globe2"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=HbP3_b4AAAAJ" target="_blank" rel="noopener" class="social-icon social-icon-scholar" title="Google Scholar"><i class="bi bi-mortarboard"></i></a>
+                <a href="https://www.linkedin.com/in/saharaali/" target="_blank" rel="noopener" class="social-icon social-icon-linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:sahara.ali@unt.edu" class="social-icon social-icon-email" title="Email"><i class="bi bi-envelope"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -179,27 +193,61 @@
           <a href="news.html" class="fw-semibold d-none d-md-inline">View all <i class="bi bi-arrow-right"></i></a>
         </div>
         <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <div class="news-date mb-2">August 2026</div>
-              <h5>D3 Lab website launched</h5>
-              <p class="pub-meta mb-0">
-                The Data-Driven Decisions Lab launches its new home on the web,
-                showcasing our research, team, and publications.
+          <!-- Featured news -->
+          <div class="col-lg-7">
+            <article class="news-featured h-100">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <span class="news-badge badge-accepted"><i class="bi bi-trophy-fill"></i> Paper Accepted</span>
+                <span class="news-new-pill">New</span>
+                <span class="news-date-light ms-auto">November 2026</span>
+              </div>
+              <h3 class="news-featured-title">
+                AirPhyAQI: Physics-Guided Graph Neural ODE for Long-Term Air Quality Forecasting
+              </h3>
+              <p class="mb-3">
+                Our paper has been accepted at <strong>IEEE BigData 2026</strong>, the IEEE
+                International Conference on Big Data.
               </p>
-            </div>
+              <ul class="news-event-meta">
+                <li><i class="bi bi-calendar-event"></i> December 14&ndash;17, 2026</li>
+                <li><i class="bi bi-geo-alt"></i> Sheraton Phoenix Downtown, Phoenix, Arizona, USA</li>
+              </ul>
+              <div class="news-countdown" data-event-date="2026-12-14T09:00:00-07:00">
+                <i class="bi bi-hourglass-split"></i> <span class="countdown-text">Coming up in December</span>
+              </div>
+            </article>
           </div>
-          <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <div class="news-date mb-2">Ongoing</div>
-              <h5>Recruiting graduate researchers</h5>
-              <p class="pub-meta mb-0">
-                We are looking for motivated PhD and MS students interested in
+
+          <div class="col-lg-5 d-flex flex-column gap-4">
+            <article class="news-card news-publication">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="news-badge badge-publication"><i class="bi bi-journal-text"></i> Publication</span>
+                <span class="news-date ms-auto">November 2026</span>
+              </div>
+              <h5 class="mb-2">LLM-based Causal Discovery from Scientific Literature</h5>
+              <p class="pub-meta mb-2">
+                Published in the Proceedings of the 2nd ACM SIGSPATIAL International
+                Workshop on Polar Data.
+              </p>
+              <a href="publications.html" class="news-link">View publications <i class="bi bi-arrow-right"></i></a>
+            </article>
+
+            <article class="news-card news-opportunity">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="news-badge badge-opportunity"><i class="bi bi-people-fill"></i> Opportunity</span>
+                <span class="news-date ms-auto">Ongoing</span>
+              </div>
+              <h5 class="mb-2">Recruiting graduate researchers</h5>
+              <p class="pub-meta mb-2">
+                We are looking for motivated MS students interested in
                 causal ML and spatiotemporal data science.
-                <a href="join.html">Learn more &rarr;</a>
               </p>
-            </div>
+              <a href="join.html" class="news-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </article>
           </div>
+        </div>
+        <div class="text-center mt-4 d-md-none">
+          <a href="news.html" class="fw-semibold">View all news <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -245,6 +293,12 @@
         <hr />
         <p class="text-center mb-0">
           &copy; <span id="copyright-year">2026</span> Data-Driven Decisions Lab, University of North Texas. All Rights Reserved.
+        </p>
+        <p class="text-center small mb-0 mt-2 photo-credit">
+          Campus photos via Wikimedia Commons:
+          <a href="https://commons.wikimedia.org/wiki/File:UNT_Discovery_Park_Exterior.JPG" target="_blank" rel="noopener">MBD123</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:University_of_North_Texas_September_2015_11_(Hurley_Administration_Building).jpg" target="_blank" rel="noopener">Michael Barera</a>,
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
         </p>
       </div>
     </footer>
